@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Super Silly Hackathon</title>
+<style>
+@font-face {
+  font-family: '🍦';
+  src: url('fonts/vanilla.woff2') format('woff2'), url('vanilla.woff') format('woff');
+}
+html {
+  background: #000E66 url(images/pattern.svg);
+  background-size: 300px;
+  color: #fff;
+  overflow-x: hidden;
+  text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+  font-size: calc(16px + (26 - 16) * (100vw - 400px)/(1200 - 400));
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  line-height: 1.7;
+}
+#👀{
+  will-change: transform;
+  margin: 0 auto 2em;
+  max-width: 640px;
+  position: relative;
+}
+#💥{
+  transform-origin: 50% 30vh 0;
+  transform: rotate(-15deg);
+}
+h1, h2, h3, button {
+  font-family: 🍦, sans-serif;
+}
+a:not(.👉) {
+  color: #fff;
+  text-decoration: none;
+  padding-bottom: 3px;
+  border-bottom: 3px ridge #F540FF;
+}
+a:not(.👉):hover {
+  color: #F540FF;
+}
+button {
+  font-family: inherit;
+  font-size: inherit;
+  color: #fff;
+  background-color: #000631;
+  padding: 1em 2em;
+  border-radius: 20172017px;
+  border: 3px solid #F540FF;
+}
+p {
+  margin-top: 0;
+  padding-top: 0;
+}
+p:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+* {
+  box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+}
+
+header {
+  text-align: center;
+  padding: 2em 0;
+}
+header h1 {
+  margin: 0;
+  padding: 0;
+  line-height: 1em;
+}
+header h1 img {
+  width: 100%;
+  height: auto;
+}
+header p {
+  font-family: 🍦, sans-serif;
+  text-shadow: 3px 3px #000;
+}
+header button {
+  font-family: 🍦, sans-serif;
+  cursor: pointer;
+  font-size: 1.25em;
+  transition-property: transform, box-shadow, border-color;
+  transition-duration: .1s;
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+header button:hover,
+header button:focus {
+  border-color: transparent;
+  transform: scale(1.2) rotate3d(0, 1, -.2, -15deg);
+  box-shadow: -5px -7px 0 #25DD00, 5px 10px 0 #1F5EFF;
+}
+header button:active {
+  transform: scale(1) rotate(3deg);
+}
+main section {
+  background-color: rgba(0, 14, 102, .85);
+  box-shadow: -15px -8px rgba(0, 6, 31, .5);
+  border-radius: 2em;
+  padding: 1.5em 2em;
+  margin-bottom: 2em;
+}
+main section:nth-child(even) {
+  transform: translateX(-1em) rotate(1deg);
+}
+main h2 {
+  text-shadow: 3px 3px #000;
+  margin-top: 1.5em;
+  margin-bottom: 0;
+  margin-left: -.5em;
+  transform: rotate(5deg);
+}
+main h2:first-child {
+  margin-top: 0;
+}
+footer {
+  text-shadow: 3px 3px #000;
+  padding: 0 2em 10em;
+  text-align: center;
+}
+footer a {
+  white-space: nowrap;
+}
+.🦄🐱 {
+  filter:
+    drop-shadow(10px 10px 0 rgba(0, 14, 102, .85))
+    drop-shadow(-10px -10px 0 rgba(0, 14, 102, .85));
+}
+em[oji]{
+  font-style: normal;
+  display: inline-block;
+  animation: 🌀 10s infinite linear;
+}
+@keyframes 🌀 {
+  0% { transform: rotate(0) }
+  100% { transform: rotate(1turn) }
+}
+</style>
+<body>
+  <div id="👀">
+    <div id="💥">
+      <header>
+        <h1><img src="images/ssh-logo.svg" alt="Super Silly Hackathon" width="590" height="315"></h1>
+        <p>🗓 Saturday, December 9, 2017</p>
+        <div><a href="#" class="👉"><button><em oji>👉</em> Get tickets</button></a></div>
+      </header>
+      <main>
+        <section>
+          <h2><em oji>🤔</em> Simi sai?</h2>
+          <p>Tired of building the next unicorn? Take a break from making the world a better place  and join us at the first Super Silly Hackathon!!!</p>
+          <p>Come together with fellow developers, engineers and designers to build cool projects with absolutely no value whatsoever. Yes, the more boliao the better.</p>
+          <p>Don't say we bojio, you hiamjio.</p>
+        </section>
+        <section>
+          <h2><em oji>💡</em> Ideas</h2>
+          <p>Too smart to think of something silly? Here are some ideas:</p>
+          <ul>
+            <li><a href="https://github.com/bdon/eyeball_pong"><b>Eyeball Pong</b></a>
+              <br>Pong game you play by not looking at it.</li>
+            <li><a href="https://bostonstupidhackathon.com/zippable-banana.jpg"><b>Zippable Banana</b></a>
+              <br>A banana peel that you can zip back up later.</li>
+            <li><a href="https://www.youtube.com/watch?v=BRtc7A2eizc"><b>Beer Selfie Stick</b></a>
+              <br>A selfie stick that lets you pour beer in your mouth before you take a photo.</li>
+          </ul>
+          <p>More ideas from <a href="http://www.stupidhackathon.com/">Stupid Hackathon</a> and <a href="https://gist.github.com/cheeaun/c3fe6cbb11aef1e146a3474dccf63b87">more</a>!!</p>
+        </section>
+        <section>
+          <h2><em oji>🏆</em> Prizes</h2>
+          <p>Boliao prize?</p>
+        </section>
+        <section>
+          <h2><em oji>🗺</em> Where ah?</h2>
+          <p>Somewhere in Singapore, I think.</p>
+        </section>
+        <section>
+          <h2><em oji>👏</em> Sponsors</h2>
+          <p>Sponsors, come I clap for you.</p>
+        </section>
+      </main>
+      <footer>
+        <img class="🦄🐱" src="images/unicat.svg" alt="Unicat!" width="280">
+        <p>
+          Organized by <a href="https://twitter.com/ongmin">Min</a>, <a href="https://twitter.com/elishatan">Elisha</a>, <a href="https://twitter.com/ValentineChua">Valentine</a> and <a href="https://twitter.com/cheeaun">Aun</a>.
+        </p>
+      </footer>
+    </div>
+  </div>
+  <script async>
+    var $eye = document.getElementById('👀');
+    var theta = Math.tan(15 * Math.PI / 180);
+    var eyeStyle = $eye.style;
+    window.onscroll = function(){
+      var top = document.body.scrollTop || document.documentElement.scrollTop;
+      var x = -top * theta;
+      eyeStyle.transform = 'translate3d(' + x + 'px, 0, 0)';
+    }
+  </script>
+</body>
