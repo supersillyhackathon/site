@@ -210,10 +210,12 @@ em[oji]{
     var $eye = document.getElementById('👀');
     var theta = Math.tan(15 * Math.PI / 180);
     var eyeStyle = $eye.style;
-    window.onscroll = function(){
+    var fly = function(){
+      requestAnimationFrame(fly);
       var top = document.body.scrollTop || document.documentElement.scrollTop;
       var x = -top * theta;
       eyeStyle.transform = 'translate3d(' + x + 'px, 0, 0)';
     }
+    requestAnimationFrame(fly);
   </script>
 </body>
