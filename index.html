@@ -189,6 +189,23 @@ em[oji]{
   padding: 2em;
   background-color: rgba(255,255,255,.8);
 }
+
+@media (prefers-reduced-motion) {
+  html {
+    background-attachment: fixed;
+  }
+  body {
+    background-color: rgba(0, 14, 102, .75);
+  }
+  main section {
+    background-color: rgb(0, 14, 102);
+    box-shadow: -15px -8px rgb(0, 6, 31);
+  }
+  * {
+    animation: none !important;
+    transition-duration: 0 !important;
+  }
+}
 </style>
 <body>
   <div id="👀">
@@ -233,7 +250,7 @@ em[oji]{
         <section id="where">
           <h2><em oji>🗺</em> Where ah?</h2>
           <p>
-            <b><a href="http://singapore.impacthub.net/homepage">Impact Hub Singapore</a></b><br>
+            <b><a href="http://singapore.impacthub.net/homepage" target="_blank">Impact Hub Singapore</a></b><br>
             <a href="https://goo.gl/maps/zgjWf9Fsk1L2" target="_blank">128 Prinsep Street, Singapore 188655</a>
           </p>
           <p>
