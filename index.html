@@ -166,6 +166,28 @@ em[oji]{
   0% { transform: rotateZ(0) }
   100% { transform: rotateZ(360deg) }
 }
+
+#where img {
+  filter:
+    drop-shadow(10px 10px 0 rgba(0, 14, 102, .85))
+    drop-shadow(-10px -10px 0 rgba(0, 14, 102, .85));
+}
+#where img[src*="01"] {
+  transform: translateX(-4em);
+  border-radius: 2em;
+}
+#where img[src*="02"] {
+  border-radius: 2em;
+  position:relative;
+  margin-top: -3em;
+  margin-bottom: -2em;
+  transform: translateX(3em);
+}
+
+#sponsors img {
+  border-radius: 2em;
+  padding: 2em;
+  background-color: rgba(255,255,255,.8);
 }
 </style>
 <body>
@@ -176,7 +198,7 @@ em[oji]{
         <p>
           <time>🗓 Saturday, 9th December 2017</time>
           <br>
-          <a href="#where">🗺 The HUB Singapore @ Prinsep</a>
+          <a href="#where">🗺 Impact Hub Singapore @ Prinsep</a>
         </p>
         <div><a href="#" class="👉"><button><em oji>👉</em> Get tickets</button></a></div>
       </header>
@@ -207,14 +229,20 @@ em[oji]{
         <section id="where">
           <h2><em oji>🗺</em> Where ah?</h2>
           <p>
-            <b><a href="http://thehub.sg">The HUB</a></b><br>
+            <b><a href="http://singapore.impacthub.net/homepage">Impact Hub Singapore</a></b><br>
             <a href="https://goo.gl/maps/zgjWf9Fsk1L2" target="_blank">128 Prinsep Street, Singapore 188655</a>
+          </p>
+          <p>
+            <img src="images/hub-01.jpg" width="980" height="545" alt="Outside Impact Hub Singapore">
+            <br>
+            <img src="images/hub-02.jpg" width="980" height="552" alt="Inside Impact Hub Singapore">
           </p>
         </section>
         <section id="sponsors">
           <h2><em oji>👏</em> Sponsors</h2>
           <p>Sponsors, come I clap for you.</p>
-        </section>
+          <img src="images/hub-logo.png" width="512" height="283" alt="Impact HUB Singapore. A Proud Partner of Google for Entrepreneurs.">
+      </section>
       </main>
       <footer>
         <img class="🦄🐱" src="images/unicat.svg" alt="Unicat!" width="280">
