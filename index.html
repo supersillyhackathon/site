@@ -38,6 +38,7 @@ body {
   max-width: 640px;
   position: relative;
   backface-visibility: hidden;
+  transition: transform .05s linear;
 }
 #💥{
   transform-origin: 50% 30vh 0;
@@ -301,7 +302,7 @@ em[oji]{
         beforeTop = top;
       }
     }
-    requestAnimationFrame(fly);
+    fly();
 
     var hashchange = function(){
       var hash = location.hash.slice(1);
