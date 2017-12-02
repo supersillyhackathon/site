@@ -46,11 +46,21 @@ body {
   position: relative;
   transform: translateZ(0);
   backface-visibility: hidden;
-  transition: transform .05s linear;
+  transition: transform .075s linear;
+  will-change: transform;
+}
+#👀.transitioning{
+  pointer-events: none;
+}
+#👀.transitioning *{
+  animation-play-state: paused;
 }
 #💥{
   transform-origin: 50% 30vh 0;
   transform: rotate(-15deg);
+}
+* {
+  box-sizing: border-box;
 }
 h1, h2, h3, button {
   font-family: 🍦, sans-serif;
@@ -88,13 +98,16 @@ p:last-child {
   margin-bottom: 0;
   padding-bottom: 0;
 }
-* {
-  box-sizing: border-box;
+ul {
+  margin-left: 0;
+  padding-left: 0;
 }
 img {
   max-width: 100%;
   height: auto;
   vertical-align: middle;
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
 }
 
 header {
@@ -110,12 +123,12 @@ header h1 img {
   width: 100%;
   height: auto;
 }
-header a {
-  border-bottom: 0 !important;
-}
 header p {
   font-family: 🍦, sans-serif;
   text-shadow: 3px 3px #000;
+}
+header p:first-of-type a {
+  border-bottom: 0 !important;
 }
 div.👉 {
   margin-bottom: 1em;
@@ -277,9 +290,9 @@ em[oji]{
             <a href="https://goo.gl/maps/zgjWf9Fsk1L2" target="_blank">128 Prinsep Street, Singapore 188655</a>
           </p>
           <p>
-            <img src="images/hub-01.jpg" width="980" height="545" alt="Outside Impact Hub Singapore">
+            <img src="images/hub-01.jpg" width="640" height="356" alt="Outside Impact Hub Singapore">
             <br>
-            <img src="images/hub-02.jpg" width="980" height="552" alt="Inside Impact Hub Singapore">
+            <img src="images/hub-02.jpg" width="640" height="360" alt="Inside Impact Hub Singapore">
           </p>
         </section>
         <section id="sponsors">
@@ -310,7 +323,7 @@ em[oji]{
         <p><img class="🦄🐱" src="images/unicat.svg" alt="Unicat!" width="280"></p>
         <p><a href="https://twitter.com/supersillyhack" class="👉">
           <button>
-            <svg viewBox="0 0 335 276" width="32" height="32" fill="currentColor">
+            <svg viewBox="0 0 335 276" width="18" height="18" fill="currentColor">
               <path d="m302 70a195 195 0 0 1 -299 175 142 142 0 0 0 97 -30 70 70 0 0 1 -58 -47 70 70 0 0 0 31 -2 70 70 0 0 1 -57 -66 70 70 0 0 0 28 5 70 70 0 0 1 -18 -90 195 195 0 0 0 141 72 67 67 0 0 1 116 -62 117 117 0 0 0 43 -17 65 65 0 0 1 -31 38 117 117 0 0 0 39 -11 65 65 0 0 1 -32 35"/>
             </svg>
             @supersillyhack
@@ -338,6 +351,13 @@ em[oji]{
       }
     }
     fly();
+
+    $eye.addEventListener('transitionstart', function(e){
+      if (e.target == $eye) $eye.classList.add('transitioning');
+    });
+    $eye.addEventListener('transitionend', function(e){
+      if (e.target == $eye) $eye.classList.remove('transitioning');
+    });
 
     var hashchange = function(){
       var hash = location.hash.slice(1);
