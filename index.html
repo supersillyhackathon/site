@@ -198,6 +198,20 @@ em[oji]{
   100% { transform: rotateZ(360deg) }
 }
 
+#schedule table {
+  table-layout: fixed;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+#schedule td {
+  vertical-align: top;
+}
+#schedule table tr td:first-child {
+  opacity: .5;
+  padding-right: 1em;
+}
+
 #where img {
   filter:
     drop-shadow(10px 10px 0 rgba(0, 14, 102, .85))
@@ -279,9 +293,37 @@ em[oji]{
           </ul>
           <p>More ideas from <a href="http://www.stupidhackathon.com/">Stupid Hackathon</a> and <a href="https://gist.github.com/cheeaun/c3fe6cbb11aef1e146a3474dccf63b87">more</a>!!</p>
         </section>
-        <section id="prizes">
-          <h2><em oji>🏆</em> Prizes</h2>
-          <p>Boliao prize?</p>
+        <section id="schedule">
+          <h2><em oji>⏳</em> Schedule</h2>
+          <table>
+            <tr>
+              <td>09:45</td><td>Arrival &amp; chill</td>
+            </tr>
+            <tr>
+              <td>10:00</td><td>Welcome from hosts &amp; messages from sponsors</td>
+            </tr>
+            <tr>
+              <td>11:00</td><td>Get hacking!</td>
+            </tr>
+            <tr>
+              <td>12:30</td><td>Lunch</td>
+            </tr>
+            <tr>
+              <td>13:30</td><td>More silly hacking!</td>
+            </tr>
+            <tr>
+              <td>18:00</td><td>Presentations</td>
+            </tr>
+            <tr>
+              <td>18:30</td><td>Boliao prize giving &amp; final words</td>
+            </tr>
+            <tr>
+              <td>19:00</td><td>Dinner &amp; chill</td>
+            </tr>
+            <tr>
+              <td>20:30</td><td>It's a wrap!</td>
+            </tr>
+          </table>
         </section>
         <section id="where">
           <h2><em oji>🗺</em> Where ah?</h2>
@@ -294,6 +336,10 @@ em[oji]{
             <br>
             <img src="images/hub-02.jpg" width="640" height="360" alt="Inside Impact Hub Singapore">
           </p>
+        </section>
+        <section id="prizes">
+          <h2><em oji>🏆</em> Prizes</h2>
+          <p>Boliao prize?</p>
         </section>
         <section id="sponsors">
           <h2><em oji>👏</em> Sponsors</h2>
