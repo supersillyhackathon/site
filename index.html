@@ -252,6 +252,11 @@ em[oji]{
     background-color: rgb(0, 14, 102);
     box-shadow: -15px -8px rgb(0, 6, 31);
   }
+  main section:nth-child(even),
+  main h2,
+  #💥 {
+    transform: none;
+  }
   * {
     animation: none !important;
     transition-duration: 0 !important;
@@ -393,8 +398,17 @@ em[oji]{
     var theta = Math.tan(15 * Math.PI / 180).toFixed(3)/1;
     var eyeStyle = $eye.style;
     var beforeTop = 0;
+
+    var motionQuery = matchMedia('(prefers-reduced-motion)');
+    var prefersReducedMotion = motionQuery.matches || false;
+    motionQuery.addListener(function(){
+      prefersReducedMotion = motionQuery.matches;
+      if (prefersReducedMotion) eyeStyle.transform = '';
+    });
+
     var fly = function(){
       requestAnimationFrame(fly);
+      if (prefersReducedMotion) return;
       var top = window.scrollY || window.pageYOffset;
       if (top != beforeTop){
         var x = -top * theta;
