@@ -44,7 +44,6 @@ body {
   margin: 0 auto 2em;
   max-width: 640px;
   position: relative;
-  transform: translateZ(0);
   backface-visibility: hidden;
   transition: transform .075s linear;
   will-change: transform;
@@ -106,8 +105,6 @@ img {
   max-width: 100%;
   height: auto;
   vertical-align: middle;
-  image-rendering: crisp-edges;
-  image-rendering: pixelated;
 }
 
 header {
@@ -169,6 +166,15 @@ main h2 {
 }
 main h2:first-child {
   margin-top: 0;
+}
+main section img {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  pointer-events: none;
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
 }
 footer {
   text-shadow: 3px 3px #000;
