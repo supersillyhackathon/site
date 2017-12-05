@@ -235,6 +235,17 @@ em[oji]{
   transform: translateX(3em);
 }
 
+#sponsors ul,
+#sponsors li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+#sponsors ul {
+  transform-origin: top center;
+  transform: perspective(600px) rotateX(-15deg);
+  margin-bottom: calc(-60vw);
+}
 #sponsors img {
   margin-bottom: 1em;
   width: 100%;
@@ -242,6 +253,10 @@ em[oji]{
   border-radius: 2em;
   padding: 2em;
   background-color: rgba(255,255,255,.8);
+  transition: background-color .3s;
+}
+#sponsors li:hover img {
+  background-color: rgba(255,255,255,1);
 }
 
 @media (prefers-reduced-motion) {
@@ -358,8 +373,13 @@ em[oji]{
         <section id="sponsors">
           <h2><em oji>👏</em> Sponsors</h2>
           <p>Sponsors, come I clap for you.</p>
-          <img src="images/hub-logo.png" width="512" height="283" alt="Impact HUB Singapore. A Proud Partner of Google for Entrepreneurs.">
-          <img src="images/microsoft-logo.svg" width="394" height="85" alt="Microsoft">
+          <ul>
+            <li><img src="images/microsoft-logo.svg" width="394" height="85" alt="Microsoft"></li>
+            <li><img src="images/mydoc-logo.png" width="512" height="168" alt="MyDoc"></li>
+            <li><img src="images/labelgoodprints-logo.png" width="283" height="130" alt="Label Good Prints"></li>
+            <li><img src="images/golden-gate-ventures-logo.svg" width="497" height="239" alt="Golden Gate Ventures"></li>
+            <li><img src="images/hub-logo.png" width="512" height="283" alt="Impact HUB Singapore. A Proud Partner of Google for Entrepreneurs."></li>
+          </ul>
         </section>
         <section id="conduct">
           <h2><em oji>👐</em> Code of Conduct</h2>
