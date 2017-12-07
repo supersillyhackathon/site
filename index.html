@@ -241,6 +241,20 @@ em[oji]{
   padding: 0;
   list-style: none;
 }
+#sponsors ul {
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+#sponsors li {
+  flex-basis: 260px;
+  text-align: center;
+}
+#sponsors li a {
+  border: 0;
+}
 #sponsors img {
   margin-bottom: 1em;
   width: 100%;
@@ -253,18 +267,27 @@ em[oji]{
 
 #sponsors ul li+li img{
   width: 90%;
+  max-width: 300px;
 }
 #sponsors ul li+li+li img{
   width: 85%;
+  max-width: 280px;
 }
 #sponsors ul li+li+li+li img{
   width: 80%;
+  max-width: 260px;
 }
 #sponsors ul li+li+li+li+li img{
   width: 75%;
+  max-width: 240px;
 }
 #sponsors ul li+li+li+li+li+li img{
   width: 70%;
+  max-width: 220px;
+}
+#sponsors ul li+li+li+li+li+li+li img{
+  width: 65%;
+  max-width: 200px;
 }
 
 @media (prefers-reduced-motion) {
@@ -382,10 +405,11 @@ em[oji]{
           <h2><em oji>👏</em> Sponsors</h2>
           <p>Sponsors, come I clap for you.</p>
           <ul>
-            <li><img src="images/microsoft-logo.svg" width="394" height="85" alt="Microsoft"></li>
-            <li><img src="images/mydoc-logo.png" width="512" height="168" alt="MyDoc"></li>
-            <li><img src="images/labelgoodprints-logo.png" width="283" height="130" alt="Label Good Prints"></li>
-            <li><img src="images/golden-gate-ventures-logo.svg" width="497" height="239" alt="Golden Gate Ventures"></li>
+            <li><a href="https://www.microsoft.com/" target="_blank"><img src="images/microsoft-logo.svg" width="394" height="85" alt="Microsoft"></a></li>
+            <li><a href="https://www.my-doc.com/" target="_blank"><img src="images/mydoc-logo.png" width="512" height="168" alt="MyDoc"></a></li>
+            <li><a href="http://labelgoodprints.com/" target="_blank"><img src="images/labelgoodprints-logo.png" width="283" height="130" alt="Label Good Prints"></a></li>
+            <li><a href="https://hasura.io/" target="_blank"><img src="images/hasura-logo.png" alt="Hasura"></a></li>
+            <li><a href="http://goldengate.vc/" target="_blank"><img src="images/golden-gate-ventures-logo.svg" width="497" height="239" alt="Golden Gate Ventures"></a></li>
             <li><img src="images/hub-logo.png" width="512" height="283" alt="Impact HUB Singapore. A Proud Partner of Google for Entrepreneurs."></li>
           </ul>
         </section>
